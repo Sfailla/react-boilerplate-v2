@@ -7,8 +7,8 @@ export const LoginPage = ({ startLogin }) => {
 		<Fragment>
 			<div className="box-layout">
 				<div className="box-layout__box">
-					<h1 className="box-layout__title">Expensify</h1>
-					<p>It's time to get your expenses under control</p>
+					<h1 className="box-layout__title">Boilerplate V2</h1>
+					<p>It's time to make a project!</p>
 					<button className="button button__login" onClick={startLogin}>
 						Login with Google
 					</button>
