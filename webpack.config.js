@@ -2,7 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+// process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 if (process.env.NODE_ENV === 'test') {
 	require('dotenv').config({ path: '.env.test' });
@@ -49,8 +49,8 @@ module.exports = (env, mode) => {
 				},
 				{
 					test: /\.(gif|png|jpeg)$/i,
-					exclude: [/node_modules/],
-					loaders: ['file-loader', 'image-webpack-loader']
+					exclude: [ /node_modules/ ],
+					loaders: [ 'file-loader', 'image-webpack-loader' ]
 				}
 			]
 		},
@@ -81,9 +81,9 @@ module.exports = (env, mode) => {
 			})
 		],
 		resolve: {
-			extensions: ['.js', '.jsx']
+			extensions: [ '.js', '.jsx' ]
 		},
-		devtool: isProduction ? 'source-map' : 'inline-source-map',
+		devtool: isProduction ? 'source-map' : 'cheap-eval-source-map',
 		devServer: {
 			contentBase: path.join(__dirname, 'public'),
 			inline: true,

@@ -12,6 +12,7 @@ import './styles/style.scss';
 // import { firebase } from './firebase/firebase';
 
 const store = configureStore();
+console.log(store);
 
 const app = (
 	<Provider store={store}>
